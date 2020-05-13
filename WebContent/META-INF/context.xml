@@ -8,7 +8,19 @@
 	password="yt1234"
 	driverClassName="com.mysql.cj.jdbc.Driver"
 	factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
-	url="jdbc:mysql://localhost:3306/testDB?useUnicode=true&amp;characterEncoding=UTF8&amp;serverTimezone=Asia/Seoul"
+	url="jdbc:mysql://localhost:3306/testdb?useUnicode=true&amp;characterEncoding=UTF8&amp;serverTimezone=Asia/Seoul"
+	maxActive="500"
+	maxIdle="100"
+	/>
+	<Resource 
+	name="jdbc/haksa"
+	auth="Container"
+	type="javax.sql.DataSource"
+	username="root"
+	password="yt1234"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+	url="jdbc:mysql://localhost:3306/haksa?useUnicode=true&amp;characterEncoding=UTF8&amp;serverTimezone=Asia/Seoul"
 	maxActive="500"
 	maxIdle="100"
 	/>
