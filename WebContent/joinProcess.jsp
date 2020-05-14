@@ -3,14 +3,20 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String id = request.getParameter("id");
+	if( request.getParameter("id").equals("")) id="gongbak";
+	else id = request.getParameter("id");
 	String pass = request.getParameter("pass");
 	String name = request.getParameter("name");
-	int age = Integer.parseInt(request.getParameter("age"));
+	int age;
+	if ( request.getParameter("age").equals("") ) age = 1;
+	else age = Integer.parseInt(request.getParameter("age"));
+	
+	/*정보를 입력하지 않은채로 회원가입을 누르면 공백이 파라미터로 넘어오는데, 공백을 int로 변환하려하니 에러가 발생한다.*/
+	
 	String gender = request.getParameter("gender");
 	String email = request.getParameter("email");
 	Connection conn = null;
 	PreparedStatement pstmt = null;
-	
 	try {
 		Context init = new InitialContext();
 		DataSource ds = (DataSource) init.lookup("java:comp/env/jdbc/members");
