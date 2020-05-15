@@ -11,14 +11,12 @@
 <script>
 	$(function(){
 		$("button").click(function(){
-			$.get("test.jsp", {'data':'홍길동','tel':'010-0000-0000'}, function(data,status){
+			$.get("test.jsp", {'data':'홍길동','tel':'010-0000-0000'}, function(data1,status1){
 				//성공일때 실행되는 콜백함수? -> function(전송받은데이터, 전송성공여부) 인자위치로 결정되는듯?
 				//전송받은데이터 : 요청에 대한 응답(test.jsp의 실행결과값)
 				alert("callback");
-				$("#target").html(data+"</hr>"+status);
-				console.log(data);
-				console.log(status);
-			}).done(function(data,status){
+				$("#target").html(data1+"</hr>"+status1);
+			}).done(function(data8,status1){
 				alert("done");
 			}); 			
 		});

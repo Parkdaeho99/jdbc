@@ -8,11 +8,15 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script>
 		var req = new XMLHttpRequest();
+		//Ajax 객체 생성
 		req.open("GET", "jsonData.json");
+		//Ajax 객체에 json데이터를 가져온다.
 		req.onload = function() {
+		//Ajax 객체가 요청을 하면(.send()) 실행될 함수
 			console.log(req.responseText);
 		}
 		req.send();
+		//Ajax객체가 요청
 		
 		$(function() {
 			$.get("jsonData.json", function(data) {
