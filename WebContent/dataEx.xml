@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<members>
+	<member>
+		<name>홍길동</name>
+		<age>20</age>
+		<grade>A</grade>
+	</member>
+	<member>
+		<name>이순희</name>
+		<age>25</age>
+		<grade>S</grade>
+	</member>
+	<member>
+		<name>강호동</name>
+		<age>30</age>
+		<grade>B</grade>
+	</member>
+</members>
+<employee>
+	<member>
+		<name>홍길동</name>
+		<age>20</age>
+		<grade>A</grade>
+	</member>	
+</employee>
+
+xml 구조는 대충 이렇게 생겼음. 이걸 불러다 쓰려면 employee 밑에 member 밑에 name age grade... 머 이런식으로 씀
+JSON 구조는 아래처럼 생겼음. {}를 이용해서 객체로 표현
+(members 라는 배열에 홍길동~강호동의 객체를 넣는다.)
+사용빈도는 JSON이 압도적.
+
+{
+	'members':[
+		{
+			name:"홍길동",
+			age:20,
+			grade:"A"
+		},
+		{
+			name:"이순희",
+			age:25,
+			grade:"S"
+		},
+		{
+			name:"강호동",
+			age:30,
+			grade:"B"
+		}
+	]
+	
+	'employee':[
+		{
+			name:"홍길동"
+			age:20;
+			grade:"A"
+		}
+	]
+}

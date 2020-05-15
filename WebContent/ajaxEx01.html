@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>아작스 예제</title>
+</head>
+<body>
+<div id ="target" style="width: 300px; height: 60px; border: solid 1px black;"></div>
+<button type="button" onclick="getFromServer()">GET DATA</button>
+<script>
+function getFromServer() {
+	var req;
+	if(window.XMLHttpRequest) {
+		req = new XMLHttpRequest;
+// 		아작스 사용을 위한 객체생성
+//		아작스: 페이지 변화(이동)없이 다른 페이지로 데이터처리를 요청하고 결과를 받는기법
+	} else {
+		req = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	req.onreadystatechange = function() {
+//		req(아작스 객체)는 요청에 의한 응답이 오기 전까지 계속 대기한다.
+//		그 후, 응답이 오면(state가 change됨) function()이라는 무명함수를 실행하도록 세팅하는 부분.
+		if(req.readyState == 4 && req.status == 200) {
+// 			status 200 코드 : 정상
+			document.getElementById("target").innerHTML = req.responseText;
+// 			test.jsp가 처리한 결과(아작스의 요청에 의한 응답)를 문자열로 반환하는 reponseText
+//	 		innerHTML : 내부 텍스트 변경
+		}
+	}
+	req.open("GET", "test.jsp", true);
+// 	open()함수를 이용하여 test.jsp에 요청세팅을 함. test.jsp의 실행이 끝나면 위에서 설정한 function()이 실행된다.
+	
+// 	true 비동기 -> 아작스를 사용하겠다. -> 페이지 변경(이동)이 없어도 작동됨 -> 페이지와 비동기
+// 	false 동기 -> 아작스 사용을 하지 않겠다. -> 페이지 변경(이동)이 있어야 작동됨 -> 페이지와 동기화됨
+	req.send();	
+// 	요청
+}
+</script>
+</body>
+</html>

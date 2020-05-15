@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>아작스 예제</title>
+</head>
+<body>
+<div id ="target" style="width: 300px; height: 60px; border: solid 1px black;"></div>
+<button type="button" >GET DATA</button>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+	$(function(){
+		$("button").click(function(){
+			$.get("test.jsp", {'data':'홍길동','tel':'010-0000-0000'}, function(data,status){
+				//성공일때 실행되는 콜백함수? -> function(전송받은데이터, 전송성공여부) 인자위치로 결정되는듯?
+				//전송받은데이터 : 요청에 대한 응답(test.jsp의 실행결과값)
+				alert("callback");
+				$("#target").html(data+"</hr>"+status);
+				console.log(data);
+				console.log(status);
+			}).done(function(data,status){
+				alert("done");
+			}); 			
+		});
+	});
+</script>
+
+</body>
+</html>

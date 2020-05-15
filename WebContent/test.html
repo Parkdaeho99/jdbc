@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>지도</title>
+</head>
+<body>
+	<h3>지도 나타내기</h3>
+	<br/>
+	<h4>구글지도</h4>
+	<div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.8459005226828!2d128.5038725152636!3d35.85278198015474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565e539748d77cf%3A0xc9a0370fd6c120fa!2z7JiB64Ko6riw7Iig7KeB7JeF7KCE66y47ZWZ6rWQKOq1rCDsmIHrgqjquLDsiKDqtZDsnKHsm5Ap!5e0!3m2!1sko!2skr!4v1589501706164!5m2!1sko!2skr" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+	</div>
+	<h4>카카오지도</h4>
+	<div>
+		<a href="https://map.kakao.com/?urlX=900202&urlY=552452&urlLevel=11&map_type=TYPE_MAP&map_hybrid=false" target="_blank"><img width="504" height="310" src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=640&MX=900202&MY=552452&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc"></a><div class="hide" style="overflow:hidden;padding:7px 11px;border:1px solid #dfdfdf;border-color:rgba(0,0,0,.1);border-radius:0 0 2px 2px;background-color:#f9f9f9;width:482px;"><strong style="float: left;"><img src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" width="72" height="16" alt="카카오맵"></strong><div style="float: right;position:relative"><a style="font-size:12px;text-decoration:none;float:left;height:15px;padding-top:1px;line-height:15px;color:#000" target="_blank" href="https://map.kakao.com/?urlX=900202&urlY=552452&urlLevel=11&map_type=TYPE_MAP&map_hybrid=false">지도 크게 보기</a></div></div>
+	</div>
+	<h4>카카오지도</h4>
+	<div>
+		<!-- * 카카오맵 - 지도퍼가기 -->
+<!-- 1. 지도 노드 -->
+<div id="daumRoughmapContainer1589502083968" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+<!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+<!-- 3. 실행 스크립트 -->
+<script charset="UTF-8">
+	new daum.roughmap.Lander({
+		"timestamp" : "1589502083968",
+		"key" : "ycck",
+		"mapWidth" : "640",
+		"mapHeight" : "360"
+	}).render();
+</script>
+	</div>
+	<div>
+	<div style="font:normal normal 400 12px/normal dotum, sans-serif; width:640px; height:392px; color:#333; position:relative"><div style="height: 360px;"><a href="https://map.kakao.com/?urlX=961424.0&amp;urlY=448895.0&amp;itemId=8504958&amp;q=%EC%98%81%EB%82%A8%EA%B1%B4%EC%84%A4%EA%B8%B0%EC%88%A0%EA%B5%90%EC%9C%A1%EC%9B%90&amp;srcid=8504958&amp;map_type=TYPE_MAP&amp;from=roughmap" target="_blank"><img class="map" src="//t1.daumcdn.net/roughmap/imgmap/0c0edab8d7cefbb72d380165e04303cb8d2f0da4121062600e00e8517ade8221" width="638px" height="358px" style="border:1px solid #ccc;"></a></div><div style="overflow: hidden; padding: 7px 11px; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 0px 0px 2px 2px; background-color: rgb(249, 249, 249);"><a href="https://map.kakao.com" target="_blank" style="float: left;"><img src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" width="72" height="16" alt="카카오맵" style="display:block;width:72px;height:16px"></a><div style="float: right; position: relative; top: 1px; font-size: 11px;"><a target="_blank" href="https://map.kakao.com/?from=roughmap&amp;srcid=8504958&amp;confirmid=8504958&amp;q=%EC%98%81%EB%82%A8%EA%B1%B4%EC%84%A4%EA%B8%B0%EC%88%A0%EA%B5%90%EC%9C%A1%EC%9B%90&amp;rv=on" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">로드뷰</a><span style="width: 1px;padding: 0;margin: 0 8px 0 9px;height: 11px;vertical-align: top;position: relative;top: 2px;border-left: 1px solid #d0d0d0;float: left;"></span><a target="_blank" href="https://map.kakao.com/?from=roughmap&amp;eName=%EC%98%81%EB%82%A8%EA%B1%B4%EC%84%A4%EA%B8%B0%EC%88%A0%EA%B5%90%EC%9C%A1%EC%9B%90&amp;eX=961424.0&amp;eY=448895.0" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">길찾기</a><span style="width: 1px;padding: 0;margin: 0 8px 0 9px;height: 11px;vertical-align: top;position: relative;top: 2px;border-left: 1px solid #d0d0d0;float: left;"></span><a target="_blank" href="https://map.kakao.com?map_type=TYPE_MAP&amp;from=roughmap&amp;srcid=8504958&amp;itemId=8504958&amp;q=%EC%98%81%EB%82%A8%EA%B1%B4%EC%84%A4%EA%B8%B0%EC%88%A0%EA%B5%90%EC%9C%A1%EC%9B%90&amp;urlX=961424.0&amp;urlY=448895.0" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">지도 크게 보기</a></div></div></div>
+	</div>
+	<div>
+	<h3>네이버지도</h3>
+	<table cellpadding="0" cellspacing="0" width="462"> <tr> <td style="border:1px solid #cecece;"><a href="https://v4.map.naver.com/?menu=location&lng=85e2e85703df560cf2932a6d26677f9a&mapMode=0&lat=dcb899fe37a401c3ac257e112f99b23e&dlevel=7&enc=b64" target="_blank"><img src="http://prt.map.naver.com/mashupmap/print?key=p1589502620342_-1550808405" width="460" height="340" alt="지도 크게 보기" title="지도 크게 보기" border="0" style="vertical-align:top;"/></a></td> </tr> <tr> <td> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td height="30" bgcolor="#f9f9f9" align="left" style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="font-family: tahoma; font-size: 11px; color:#666;">2020.5.15</span>&nbsp;<span style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;" href="https://v4.map.naver.com/?menu=location&lng=85e2e85703df560cf2932a6d26677f9a&mapMode=0&lat=dcb899fe37a401c3ac257e112f99b23e&dlevel=7&enc=b64" target="_blank">지도 크게 보기</a> </td> <td width="98" bgcolor="#f9f9f9" align="right" style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="float:right;"><span style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;" href="https://www.navercorp.com" target="_blank">NAVER Corp.</a></span> </td> </tr> </table> </td> </tr> </table>
+	</div>
+</body>
+</html>

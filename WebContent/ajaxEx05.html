@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>아작스 예제</title>
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+		var req = new XMLHttpRequest();
+		req.open("GET", "jsonData.json");
+		req.onload = function() {
+			console.log(req.responseText);
+		}
+		req.send();
+		
+		$(function() {
+			$.get("jsonData.json", function(data) {
+				for (var i in data) {
+					for (var obj in data[i]) document.write(data[i][obj]+ " ");
+					document.write("<br />");
+				}
+			});
+		});
+	</script>
+</body>
+</html>
